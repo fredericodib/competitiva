@@ -52,13 +52,26 @@ for (int i=0;i<originalVec.size();i++) {
 ```
 
 
-###  Ver se uma string cabe dentro da outra
+###  string include substring
 ```cpp
 string str ("There are two needles in this haystack.");
 string str2 ("needle");
 
 if (str.find(str2) != string::npos) {
 //.. found.
+} 
+```
+
+###  string erase substring
+```cpp
+s.erase(index, size);
+} 
+```
+
+
+###  string find substring
+```cpp
+s.substr(index, size);
 } 
 ```
 
