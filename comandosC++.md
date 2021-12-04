@@ -148,6 +148,12 @@ int size = meu_mapa.size();
 for(auto& p : mapa){
 	printf("%d %d",p.first,p.second);
 }
+
+--
+
+if ( m.find("f") == m.end() ) {
+  // not found
+}
 ```
 
 
@@ -214,4 +220,10 @@ sum += c - 48;
 ```cpp
 double positive = 0;
 printf("%.6f\n", positive / arr.size());
+```
+
+
+###  absolute value
+```cpp
+cout << abs(-5);
 ```
