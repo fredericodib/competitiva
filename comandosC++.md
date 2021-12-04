@@ -195,3 +195,10 @@ to_string(sum)
 char to int
 sum += c - 48;
 ```
+
+
+###  precisão float
+```cpp
+double positive = 0;
+printf("%.6f\n", positive / arr.size());
+```
