@@ -180,3 +180,18 @@ for(int i=0;i<9;i++){
   }
 }
 ```
+
+
+###  comversão
+```cpp
+string para int
+int oi = atoi(n.c_str());
+
+--
+int to string
+to_string(sum)
+
+--
+char to int
+sum += c - 48;
+```
