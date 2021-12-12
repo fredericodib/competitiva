@@ -233,3 +233,8 @@ cout << abs(-5);
 numeric_limits<int>::min()
 numeric_limits<int>::max()
 ```
+
+###  memorization
+```cpp
+memset(memorization, -1, sizeof(memorization));
+```
