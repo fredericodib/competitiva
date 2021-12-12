@@ -227,3 +227,9 @@ printf("%.6f\n", positive / arr.size());
 ```cpp
 cout << abs(-5);
 ```
+
+###  maximum and minimum values
+```cpp
+numeric_limits<int>::min()
+numeric_limits<int>::max()
+```
