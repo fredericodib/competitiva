@@ -13,6 +13,11 @@ bool compareByLength(const data &a, const data &b) {
 }
 
 sort(info.begin(), info.end(), compareByLength);
+
+// usando lambda
+sort(info.begin(), info.end(), [](const data &a, const data &b) {return a.word.size() < b.word.size();});
+
+sort(info.begin(), info.end(), [](int a, int b) {return a < b.word.size();});
 ```
 
 
@@ -91,21 +96,6 @@ var splits = myString.split(' ', 3);
 console.log(splits);
 ```
 
-###  Split de uma string
-```cpp
-var names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ';
-
-var re = /\s*;\s*/;
-var nameList = names.split(re);
-
---
-
-var myString = 'Hello World. How are you doing?';
-var splits = myString.split(' ', 3);
-
-console.log(splits);
-```
-
 
 ###  Pair
 ```cpp
@@ -154,6 +144,12 @@ for(auto& p : mapa){
 if ( m.find("f") == m.end() ) {
   // not found
 }
+
+--
+
+// acessar o primeiro elemento
+m.begin()->first // key
+m.begin()->second // value
 ```
 
 
@@ -200,6 +196,35 @@ for(int i=0;i<9;i++){
 }
 ```
 
+###  priority queue
+```cpp
+priority_queue<int> fila;
+for(int i=0;i<10;i++){
+  fila.push(i);
+}
+cout << fila.top() << endl;
+cout << fila.pop() << endl;
+cout << fila.top() << endl;
+
+for(int i=0;i<9;i++){
+  fila.pop();
+  if(fila.empty()){
+    cout << "Vazio na iteração " << i+1 << endl;
+  }
+}
+```
+
+###  lista
+```cpp
+list<int> l;
+l.push_back(1);
+l.push_front(1)
+l.pop_back();
+l.pop_front();
+l.back();
+l.front();
+```
+
 
 ###  comversão
 ```cpp
@@ -232,6 +257,9 @@ cout << abs(-5);
 ```cpp
 numeric_limits<int>::min()
 numeric_limits<int>::max()
+
+INT_MIN
+INT_MAX
 ```
 
 ###  memorization
