@@ -198,6 +198,10 @@ for(int i=0;i<9;i++){
 
 ###  priority queue
 ```cpp
+auto comp = []( adjist a, adjlist b ) { return a.second > b.second; };
+priority_queue< adjlist_edge , vector<adjlist_edge>, decltype( comp )> adjlist_pq(comp);
+priority_queue<int , vector<int>, greater<int>> pq;
+
 priority_queue<int> fila;
 for(int i=0;i<10;i++){
   fila.push(i);
